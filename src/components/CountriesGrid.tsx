@@ -1,7 +1,6 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Country } from '../models/Country';
-
 import { getCountries } from '../functions/getCountries';
 
 import CountryCard from './CountryCard';
@@ -22,7 +21,7 @@ const CountriesGrid: React.FC = () => {
     fetchData();
   }, []);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
 
