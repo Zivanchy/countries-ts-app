@@ -34,12 +34,12 @@ const CountriesGrid: React.FC = () => {
   }
 
   return (
-    <>
+    <div className="mx-20 my-20">
       <div className="flex justify-between items-center">
         <SearchInput handleChange={handleChange} />
         <Filter handleClick={selectRegion} />
       </div>
-      <div className="mt-10 flex flex-wrap gap-5">
+      <div className="mt-10 flex flex-wrap gap-5 justify-between">
         {countries
           .filter((country) => {
             return (
@@ -55,10 +55,11 @@ const CountriesGrid: React.FC = () => {
               population={country.population}
               img={country.flags.png}
               region={country.region}
+              cca3={country.cca3}
             />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
