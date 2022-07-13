@@ -26,12 +26,12 @@ const CountryPage: React.FC = () => {
   }
 
   return (
-    <div className="mx-auto w-fit">
+    <div className="mx-auto w-fit overflow-x-hidden">
       <Link to="/" className="btn my-20">
         <BsArrowLeft className="mr-3 text-2xl" />
         Back
       </Link>
-      <div className="flex gap-10">
+      <div className="flex flex-col xl:flex-row gap-10">
         <img
           src={country.flags.png}
           alt="country flag"
@@ -40,7 +40,7 @@ const CountryPage: React.FC = () => {
         <div className="ml-10">
           <h3 className="text-3xl  font-bold mb-7">{country.name.official}</h3>
 
-          <div className="flex justify-between items-start gap-x-32">
+          <div className="flex flex-col gap-y-10 justify-between items-start lg:flex-row lg:gap-y-0">
             <div>
               <div className="mb-5 w-72">
                 <span className="font-bold mr-2">Native name:</span>
