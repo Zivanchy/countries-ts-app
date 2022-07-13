@@ -35,7 +35,7 @@ const CountryPage: React.FC = () => {
         <img
           src={country.flags.png}
           alt="country flag"
-          className="w-[560px] h-[400px] object-contain"
+          className="min-w-[320px] h-[150px] lg:w-[560px] lg:h-[400px] object-contain"
         />
         <div className="ml-10">
           <h3 className="text-3xl text-slate-50 font-bold mb-7">

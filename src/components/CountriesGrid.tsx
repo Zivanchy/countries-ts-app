@@ -35,7 +35,7 @@ const CountriesGrid: React.FC = () => {
 
   return (
     <div className="mx-20 my-20">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col items-start lg:flex-row lg:justify-between lg:items-center">
         <SearchInput handleChange={handleChange} />
         <Filter handleClick={selectRegion} />
       </div>
