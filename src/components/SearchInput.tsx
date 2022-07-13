@@ -8,12 +8,12 @@ interface Input {
 
 const SearchInput: React.FC<Input> = ({ handleChange }) => {
   return (
-    <form className="form-control p-1 mb-5 w-11/12 flex flex-row items-center bg-slate-800 rounded-md shadow-md lg:w-96 lg:mb-0">
+    <form className="form-control p-1 mb-5 w-11/12 flex flex-row items-center rounded-md shadow-md lg:w-96 lg:mb-0">
       <AiOutlineSearch className="text-3xl mx-5" />
       <input
         type="text"
         placeholder="Search for a country..."
-        className="input w-full bg-slate-800 text-l focus:outline-none lg:w-96"
+        className="input w-full text-l focus:outline-none lg:w-96"
         onChange={handleChange}
       />
     </form>

@@ -21,22 +21,22 @@ const CountryCard: React.FC<Country> = ({
 }) => {
   return (
     <Link to={`/country/${cca3}`}>
-      <div className="card card-normal card-bordered bg-slate-800 w-72 shadow-md ease-in-out duration-200 hover:scale-105 hover:cursor-pointer">
+      <div className="card card-normal card-bordered w-72 shadow-2xl ease-in-out duration-200 hover:scale-105 hover:cursor-pointer">
         <figure className="w-72 h-40 max-h-full object-cover">
           <img src={img} alt="Country flag" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-slate-50">{name}</h2>
+          <h2 className="card-title">{name}</h2>
           <p>
-            <span className="font-bold text-slate-50 mr-2">Population:</span>
+            <span className="font-bold mr-2">Population:</span>
             {population.toLocaleString('en-US')}
           </p>
           <p>
-            <span className="font-bold text-slate-50 mr-2">Region:</span>
+            <span className="font-bold mr-2">Region:</span>
             {region}
           </p>
           <p>
-            <span className="font-bold text-slate-50 mr-2">Capital:</span>
+            <span className="font-bold mr-2">Capital:</span>
             {capital}
           </p>
         </div>

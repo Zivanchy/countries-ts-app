@@ -7,7 +7,11 @@ import CountryCard from './CountryCard';
 import SearchInput from './SearchInput';
 import Filter from './Filter';
 
-const CountriesGrid: React.FC = () => {
+interface Props {
+  theme: boolean;
+}
+
+const CountriesGrid: React.FC<Props> = ({ theme }) => {
   const [countries, setCountries] = useState<Country[] | null>(null);
   const [input, setInput] = useState<string>('');
   const [region, setRegion] = useState<string>('all');
@@ -37,7 +41,7 @@ const CountriesGrid: React.FC = () => {
     <div className="mx-20 my-20">
       <div className="flex flex-col items-start lg:flex-row lg:justify-between lg:items-center">
         <SearchInput handleChange={handleChange} />
-        <Filter handleClick={selectRegion} />
+        <Filter handleClick={selectRegion} theme={theme} />
       </div>
       <div className="mt-10 flex flex-wrap gap-5 justify-between">
         {countries

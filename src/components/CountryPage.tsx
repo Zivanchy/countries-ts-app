@@ -27,7 +27,7 @@ const CountryPage: React.FC = () => {
 
   return (
     <div className="mx-auto w-fit">
-      <Link to="/" className="btn text-slate-50 bg-slate-800 my-20">
+      <Link to="/" className="btn my-20">
         <BsArrowLeft className="mr-3 text-2xl" />
         Back
       </Link>
@@ -38,11 +38,9 @@ const CountryPage: React.FC = () => {
           className="min-w-[320px] h-[150px] lg:w-[560px] lg:h-[400px] object-contain"
         />
         <div className="ml-10">
-          <h3 className="text-3xl text-slate-50 font-bold mb-7">
-            {country.name.official}
-          </h3>
+          <h3 className="text-3xl  font-bold mb-7">{country.name.official}</h3>
 
-          <div className="text-slate-50 flex justify-between items-start gap-x-32">
+          <div className="flex justify-between items-start gap-x-32">
             <div>
               <div className="mb-5 w-72">
                 <span className="font-bold mr-2">Native name:</span>
@@ -68,7 +66,7 @@ const CountryPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="text-slate-50">
+            <div>
               <div className="mb-5 w-72">
                 <span className="font-bold mr-2">Top level domain:</span>
                 {country.tld}
